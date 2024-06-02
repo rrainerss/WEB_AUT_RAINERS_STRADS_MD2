@@ -1,17 +1,17 @@
 //Rainers Strads IT2
 
+import {
+    validateLogin,
+}
+from '../qa/reusable.cy';
+
 describe("Make Appointment", () => {
 
     it("form", () => {
         cy.visit("https://katalon-demo-cura.herokuapp.com/");
 
         //Login page
-        cy.get('#btn-make-appointment').click();
-        cy.get('#txt-username').type('John Doe');
-        cy.get('#txt-password').type('ThisIsNotAPassword');
-        cy.get('#txt-username').should('have.value', 'John Doe');
-        cy.get('#txt-password').should('have.value', 'ThisIsNotAPassword');
-        cy.get('#btn-login').click();
+        validateLogin();
 
         //Appointment selection page input
         cy.get('#combo_facility').select('Seoul CURA Healthcare Center');
