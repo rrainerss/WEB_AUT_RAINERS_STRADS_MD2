@@ -1,2 +1,4 @@
 # WEB_AUT_RAINERS_STRADS_MD2
- Rainers Strads IT2
+
+This is the second testing homework
+IT22033
